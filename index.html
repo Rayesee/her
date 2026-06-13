@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Muzirui | 个人主页</title>
+    <meta
+      name="description"
+      content="Muzirui 的个人主页，展示个人介绍、能力方向、项目作品和联系方式。"
+    >
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts/app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header" aria-label="主导航">
+      <a class="brand" href="#home" aria-label="回到首页">
+        <span class="brand-mark">M</span>
+        <span>Muzirui</span>
+      </a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="#about">关于</a>
+        <a href="#cosmos">宇宙</a>
+        <a href="#timeline">今天</a>
+        <a href="#work">作品</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-media" src="assets/hero-visual.png" alt="紫色抽象视觉背景">
+        <canvas id="particle-bg" class="particle-bg" aria-hidden="true"></canvas>
+        <div class="hero-shade"></div>
+        <div class="hero-content reveal">
+          <p class="eyebrow">个人主页 / Portfolio</p>
+          <h1 id="hero-title">你好，我是 Muzirui。</h1>
+          <p class="hero-copy">
+            在代码与光影之间，探索一片属于自己的紫色星云。移动鼠标，让星尘随你流动。
+          </p>
+          <div class="hero-actions" aria-label="主要操作">
+            <a class="button primary" href="#work">查看作品</a>
+            <a class="button secondary" href="#contact">联系我</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section intro-section nebula-rose reveal" aria-labelledby="about-title">
+        <canvas id="nebula-bg" class="nebula-bg" aria-hidden="true"></canvas>
+        <div class="nebula-rose-shade" aria-hidden="true"></div>
+        <div class="intro-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Rose Nebula · NGC 2237</p>
+            <h2 id="about-title">把复杂问题变成清楚的结果。</h2>
+            <p class="section-copy nebula-copy">
+              像玫瑰星云里的电离氢气一样，在暗处发光——把模糊的想法凝成清晰、可感知的形态。
+            </p>
+          </div>
+          <div class="intro-grid">
+            <article class="intro-panel">
+              <span class="panel-index">01</span>
+              <h3>清晰表达</h3>
+              <p>擅长把需求、思路和成果拆解成容易理解的结构，让沟通更高效。</p>
+            </article>
+            <article class="intro-panel">
+              <span class="panel-index">02</span>
+              <h3>视觉审美</h3>
+              <p>偏好克制但有辨识度的视觉风格，关注排版、节奏和细节一致性。</p>
+            </article>
+            <article class="intro-panel">
+              <span class="panel-index">03</span>
+              <h3>持续迭代</h3>
+              <p>从真实反馈里优化作品，让页面、内容和体验逐步接近目标。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section effects-section reveal" aria-labelledby="effects-title">
+        <div class="section-heading">
+          <p class="eyebrow">Canvas Effects</p>
+          <h2 id="effects-title">用粒子表达状态、节奏和灵感。</h2>
+        </div>
+        <div class="effects-grid">
+          <article class="effect-card">
+            <canvas class="effect-canvas" data-effect="flow" aria-hidden="true"></canvas>
+            <div class="effect-meta">
+              <span>01</span>
+              <h3>粒子流场</h3>
+            </div>
+          </article>
+          <article class="effect-card">
+            <canvas class="effect-canvas" data-effect="orbit" aria-hidden="true"></canvas>
+            <div class="effect-meta">
+              <span>02</span>
+              <h3>星轨漂浮</h3>
+            </div>
+          </article>
+          <article class="effect-card">
+            <canvas class="effect-canvas" data-effect="spark" aria-hidden="true"></canvas>
+            <div class="effect-meta">
+              <span>03</span>
+              <h3>灵感闪烁</h3>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="cosmos" class="section cosmic-section reveal" aria-labelledby="cosmos-title">
+        <div class="section-heading">
+          <p class="eyebrow">Cosmos</p>
+          <h2 id="cosmos-title">引力场里的星云漫游。</h2>
+          <p class="section-copy">
+            移动鼠标改变引力中心，点击释放脉冲波。每一颗粒子都在螺旋臂上漂移，像遥远星系里的尘埃。
+          </p>
+        </div>
+        <div class="cosmic-stage" aria-label="交互式星系画布">
+          <canvas id="galaxy-canvas" class="galaxy-canvas" aria-hidden="true"></canvas>
+          <div class="cosmic-hud">
+            <span class="cosmic-hud-item">
+              <span class="cosmic-dot"></span>
+              拖拽引力
+            </span>
+            <span class="cosmic-hud-item">
+              <span class="cosmic-dot pulse"></span>
+              点击脉冲
+            </span>
+          </div>
+        </div>
+        <div class="cosmic-stats" aria-label="宇宙数据">
+          <article class="cosmic-stat">
+            <span class="cosmic-stat-value" data-cosmic-counter="stars">0</span>
+            <span class="cosmic-stat-label">可见恒星</span>
+          </article>
+          <article class="cosmic-stat">
+            <span class="cosmic-stat-value" data-cosmic-counter="distance">0</span>
+            <span class="cosmic-stat-label">光年距离</span>
+          </article>
+          <article class="cosmic-stat">
+            <span class="cosmic-stat-value" data-cosmic-counter="pulse">0</span>
+            <span class="cosmic-stat-label">脉冲次数</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="timeline" class="section timeline-section reveal" aria-labelledby="timeline-title">
+        <div class="section-heading">
+          <p class="eyebrow">Today / 2026.06.13</p>
+          <h2 id="timeline-title">今天的时间线</h2>
+          <p class="section-copy">
+            从一杯咖啡和电脑开始，到上海国际电影节的城市现场，把今天收进一组紫色记忆里。
+          </p>
+        </div>
+
+        <div class="timeline-list" aria-label="今天的时间线">
+          <article class="timeline-item">
+            <div class="timeline-media">
+              <img src="assets/timeline/coffee-work.jpg" alt="桌面上的咖啡、电脑和鼠标">
+            </div>
+            <div class="timeline-content">
+              <time datetime="2026-06-13T10:00">上午</time>
+              <h3>咖啡桌上的开场</h3>
+              <p>用一杯冰咖啡给今天开机，电脑、鼠标和桌面细节组成了安静的工作起点。</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-media">
+              <img src="assets/timeline/siff-street.jpg" alt="街边的上海国际电影节海报">
+            </div>
+            <div class="timeline-content">
+              <time datetime="2026-06-13T13:00">中午</time>
+              <h3>路过电影节海报</h3>
+              <p>城市街口出现第 28 届上海国际电影节的视觉，像是今天行程的第一个提示。</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-media">
+              <img src="assets/timeline/siff-ticket.jpg" alt="上海国际电影节票根造型装置">
+            </div>
+            <div class="timeline-content">
+              <time datetime="2026-06-13T15:00">下午</time>
+              <h3>在票根装置前停留</h3>
+              <p>白色拼图片和黄色集装箱让现场很有记忆点，像一张可以走进去的电影票。</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-media">
+              <img src="assets/timeline/siff-hall.jpg" alt="上海国际电影节场馆内的巨幅天幕">
+            </div>
+            <div class="timeline-content">
+              <time datetime="2026-06-13T17:00">傍晚</time>
+              <h3>走进光影现场</h3>
+              <p>场馆天幕把蓝色、金色和人群投影铺开，今天从代码和咖啡走向了电影与光。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="focus" class="section cyber-sky reveal" aria-labelledby="skills-title">
+        <canvas id="cyber-sky-bg" class="cyber-sky-bg" aria-hidden="true"></canvas>
+        <div class="cyber-scanlines" aria-hidden="true"></div>
+        <div class="cyber-inner">
+          <div class="constellation-wrap cyber-frame cyber-board" aria-label="能力方向星图">
+            <span class="cyber-corner cyber-corner-tl" aria-hidden="true"></span>
+            <span class="cyber-corner cyber-corner-tr" aria-hidden="true"></span>
+            <span class="cyber-corner cyber-corner-bl" aria-hidden="true"></span>
+            <span class="cyber-corner cyber-corner-br" aria-hidden="true"></span>
+            <canvas id="constellation-canvas" class="constellation-canvas" aria-hidden="true"></canvas>
+            <div class="cyber-board-row">
+              <div class="cyber-heading-inline">
+                <p class="eyebrow">Focus · SYS/VECTOR</p>
+                <h2 id="skills-title">当前关注方向</h2>
+              </div>
+              <p class="section-copy cyber-copy">
+                在数据星图里标记坐标——每一项能力都是一颗可被点亮的导航星。
+              </p>
+              <div class="skill-list constellation-stars cyber-tags cyber-tags-row">
+                <span data-star="0"><span class="tag-code">01</span>网页设计</span>
+                <span data-star="1"><span class="tag-code">02</span>内容策划</span>
+                <span data-star="2"><span class="tag-code">03</span>产品原型</span>
+                <span data-star="3"><span class="tag-code">04</span>品牌表达</span>
+                <span data-star="4"><span class="tag-code">05</span>前端实现</span>
+                <span data-star="5"><span class="tag-code">06</span>AI 工具应用</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="section work-section reveal" aria-labelledby="work-title">
+        <div class="section-heading">
+          <p class="eyebrow">Selected Work</p>
+          <h2 id="work-title">精选作品</h2>
+        </div>
+        <div class="work-grid">
+          <article class="work-card paper-card tilt-left">
+            <div class="work-card-top">
+              <span>网页</span>
+              <time datetime="2026">2026</time>
+            </div>
+            <h3>个人品牌主页</h3>
+            <p>围绕个人介绍、能力标签和作品展示设计的一页式主页。</p>
+          </article>
+          <article class="work-card paper-card tilt-right">
+            <div class="work-card-top">
+              <span>内容</span>
+              <time datetime="2026">2026</time>
+            </div>
+            <h3>灵感笔记系统</h3>
+            <p>用于整理想法、资料和输出节奏的轻量化内容管理方案。</p>
+          </article>
+          <article class="work-card paper-card">
+            <div class="work-card-top">
+              <span>原型</span>
+              <time datetime="2026">2026</time>
+            </div>
+            <h3>效率工具概念</h3>
+            <p>面向日常任务管理和信息聚合的交互原型探索。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section reveal" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">一起做点有意思的东西。</h2>
+          <p>
+          </p>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary" href="mailto:hello@example.com">muziruix@gmail.com</a>
+          <a class="button secondary" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </section>
+    </main>
+
+    <canvas id="cosmic-cursor" class="cosmic-cursor" aria-hidden="true"></canvas>
+  </body>
+</html>
