@@ -23,7 +23,10 @@ if gh repo view "${OWNER}/${REPO}" >/dev/null 2>&1; then
   echo "仓库已存在，直接推送..."
   git push -u origin main
 else
-  gh repo create "$REPO" --public --source=. --remote=origin --push
+  gh repo create "$REPO" --public --source=. --remote=origin --push 2>/dev/null || {
+    git remote set-url origin "$REMOTE"
+    git push -u origin main
+  }
 fi
 
 echo ""
