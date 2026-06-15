@@ -31,8 +31,9 @@ fi
 
 echo ""
 echo "==> 启用 GitHub Pages..."
-gh api -X PUT "repos/${OWNER}/${REPO}/pages" \
-  -f build_type=workflow >/dev/null 2>&1 || true
+gh api "repos/${OWNER}/${REPO}/pages" >/dev/null 2>&1 || \
+  gh api -X POST "repos/${OWNER}/${REPO}/pages" \
+    -f 'source[branch]=main' -f 'source[path]=/' >/dev/null 2>&1 || true
 
 echo ""
 echo "完成！"
