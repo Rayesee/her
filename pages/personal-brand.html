@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>个人品牌主页 | Muzirui</title>
+    <meta
+      name="description"
+      content="紫色星云主题的一页式个人品牌主页，包含粒子动效、玫瑰星云与赛博星图板块。"
+    >
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="主导航">
+      <a class="brand" href="../index.html#home" aria-label="回到首页">
+        <span class="brand-mark">M</span>
+        <span>Muzirui</span>
+      </a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="../index.html#about">关于</a>
+        <a href="../index.html#cosmos">宇宙</a>
+        <a href="../index.html#timeline">今天</a>
+        <a href="../index.html#work">作品</a>
+        <a href="../index.html#contact">联系</a>
+      </nav>
+    </header>
+
+    <main class="detail-page">
+      <section class="detail-hero reveal">
+        <p class="eyebrow">Selected Work · 网页</p>
+        <h1>个人品牌主页</h1>
+        <p class="detail-lead">
+          以紫色星云为视觉主线的一页式主页，把个人介绍、能力标签与作品展示整合在同一条浏览路径里。
+        </p>
+        <div class="detail-meta">
+          <span>2026</span>
+          <span>HTML / CSS / Canvas</span>
+          <span>一页式站点</span>
+        </div>
+      </section>
+
+      <section class="section detail-body reveal">
+        <div class="detail-grid">
+          <article class="detail-panel">
+            <span class="panel-index">01</span>
+            <h2>项目背景</h2>
+            <p>
+              需要一个能同时表达审美偏好与技术能力的个人入口，而不是传统简历式的信息堆叠。
+              页面从 Hero 粒子背景开始，逐步引导访客了解能力方向与代表作品。
+            </p>
+          </article>
+          <article class="detail-panel">
+            <span class="panel-index">02</span>
+            <h2>设计重点</h2>
+            <p>
+              统一紫色色板，配合 Canvas 粒子、玫瑰星云与赛博星图等板块，形成「暗处发光」的视觉节奏。
+              交互上保留鼠标引力、脉冲波和星座连线等轻量动效，增强记忆点但不干扰阅读。
+            </p>
+          </article>
+          <article class="detail-panel">
+            <span class="panel-index">03</span>
+            <h2>实现方式</h2>
+            <p>
+              纯静态页面，无框架依赖；Canvas 动效按区块拆分初始化，并支持「减少动态效果」降级。
+              作品卡片可跳转至独立详情页，方便后续扩展更多案例。
+            </p>
+          </article>
+        </div>
+
+        <div class="detail-actions">
+          <a class="button primary" href="../index.html">查看完整主页</a>
+          <a class="button secondary" href="../index.html#work">返回作品列表</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

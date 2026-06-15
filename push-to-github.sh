@@ -23,4 +23,13 @@ else
 fi
 
 echo ""
-echo "完成！仓库地址: https://github.com/muzirui/her"
+echo "==> 启用 GitHub Pages..."
+gh api -X PUT repos/muzirui/her/pages \
+  -f build_type=workflow >/dev/null 2>&1 || true
+
+echo ""
+echo "完成！"
+echo "  仓库地址: https://github.com/muzirui/her"
+echo "  Pages 地址: https://muzirui.github.io/her/"
+echo ""
+echo "推送后 Actions 会自动部署，约 1-2 分钟可在 Pages 地址访问。"
